@@ -1,0 +1,17 @@
+# Pinned to the versions CodeSentinel was built and tested with
+fastapi==0.162.0
+uvicorn[standard]==0.54.0
+SQLAlchemy[asyncio]==2.1.6
+greenlet==3.5.6
+aiosqlite==0.22.1
+alembic==1.20.1
+pydantic==2.14.2
+pydantic-settings==2.16.2
+python-multipart==0.0.32
+python-dotenv==1.2.4
+GitPython==3.2.1
+google-generativeai==0.8.6
+detect-secrets==1.5.0
+packaging==26.3
+httpx==0.28.1
+aiofiles==25.1.0

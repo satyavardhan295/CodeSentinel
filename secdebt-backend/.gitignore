@@ -1,0 +1,18 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Runtime data
+*.db
+*.db.*
+*.bak
+*.db-journal
+uploads/*
+!uploads/.gitkeep
+repos/*
+!repos/.gitkeep

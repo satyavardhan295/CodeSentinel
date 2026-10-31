@@ -1,0 +1,31 @@
+# Keep secrets, local data and build output out of the image
+**/.env
+**/*.db
+**/*.db.*
+**/*.bak
+**/*.db-journal
+**/__pycache__
+secdebt-backend/.venv
+secdebt-backend/uploads
+secdebt-backend/repos
+node_modules
+dist
+.claude
+.git
+
+# Old duplicate copies of the frontend at the project root (unused)
+/api
+/hooks
+/pages
+/components
+/types
+/styles
+/*.tsx
+/client.ts
+/index.ts
+/mockData.ts
+/useFindings.ts
+/useReport.ts
+/useScan.ts
+/useTheme.ts
+/tokens.css

@@ -1,0 +1,81 @@
+:root {
+  /* Light theme (default) */
+  --bg: #EDF0F3;
+  --surface: #FFFFFF;
+  --ink: #1B2430;
+  --muted: #5B6676;
+  --line: #D5DAE1;
+  --brand: #145374;
+  --brand-hover: #0E3F58;
+
+  /* Severity colors */
+  --sev-critical: #C42B3A;
+  --sev-high: #D9702B;
+  --sev-medium: #B8901A;
+  --sev-low: #3B7EA1;
+  --sev-fixed: #2F855A;
+}
+
+.dark {
+  /* Dark theme */
+  --bg: #10161D;
+  --surface: #17202A;
+  --ink: #E6EBF0;
+  --muted: #9AA6B5;
+  --line: #263241;
+  --brand: #5FB3D4;
+  --brand-hover: #3E9DBF;
+
+  /* Lighter tints of severity colors in dark mode */
+  --sev-critical: #E05260;
+  --sev-high: #E88B4E;
+  --sev-medium: #D4AA33;
+  --sev-low: #579BBE;
+  --sev-fixed: #48A375;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-color: var(--line);
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: 'Public Sans', system-ui, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Number tabular alignment across app */
+  .tabular-nums,
+  table,
+  [data-tabular="true"] {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Focus rings */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 2px;
+  }
+
+  /* Overlay shadows strictly for drawers, modals, dropdowns */
+  .overlay-shadow {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  }
+  .dark .overlay-shadow {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+  }
+}
